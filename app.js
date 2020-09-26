@@ -13,7 +13,7 @@ function myFunction(btn,dots,more) {
       moreText.style.display = "inline";
     }
   }
-
+//aa
   // Get the modal
 var modal = document.getElementById("myModal");
 
