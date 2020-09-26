@@ -1,0 +1,275 @@
+*{
+    margin:0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-size: 24px;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-header{
+    background-color: #53917E;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
+
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+header ul li{
+    
+    padding: 0.5rem;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+}
+
+header ul .list{
+    cursor: pointer;
+    flex-shrink: 0;
+    transition-duration: 0.4s;
+}
+
+header ul .list:hover{
+    font-size: 25px;
+    color: rgb(53, 53, 53);
+}
+
+.title{
+    font-family: 'Oleo Script', cursive;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.signup:hover{
+    cursor: pointer;
+    background-color: #FF6666;
+    color: white;
+}
+
+.signup{
+    background-color: #53917E;
+    border: 4px solid #FF6666; 
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.modal-content {
+    color: white;
+    background-color: #53917E;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+
+  input{
+      font-size: 20px;
+  }
+  #hello{
+      visibility: hidden;
+      text-align: center;
+      /* font-size: 50px; */
+      color: rgb(49, 49, 49);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.flex-main{
+    display: flex;
+    flex: 1;
+}
+
+.flex-article{
+    background-color: white;
+    color: black;
+    padding-top:3rem; 
+    flex:5 5 ;
+    padding-left: 15%;
+    padding-right: 1%;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}
+
+.headline{
+    color:rgb(90, 88, 88);
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    font-size: 50px;
+     padding-top: 12px; 
+}
+
+a {
+    color: white;
+    text-decoration: none ;
+ }
+a:hover
+ {
+   color:rgb(53, 53, 53);
+   text-decoration:none;
+   cursor:pointer;
+  }
+
+.podnaslov{
+    color:#a88a6a;
+    text-align: center;
+    font-size: 20px;
+}
+
+.recipes,.veges,.shapes1,.shapes2{
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex:1;
+    justify-content: space-between;
+}
+
+.recipe-headline{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #53917E;
+    padding-bottom: 4%;
+}
+
+img{
+    /*max-width: 80%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+  
+}
+
+.metod{
+    text-align: justify;
+    padding-left: 3%; 
+    padding-right: 3%; 
+    padding-top: 3%; 
+    font-size: 20px;
+}
+
+#more1,#more2,#more3,#more4,#more5,#more6 {
+    display: none;
+    text-align: justify;
+    padding-left: 3%; 
+    padding-right: 3%; 
+    padding-top: 3%; 
+}
+
+.readmore{
+    background-color: white;
+    border: 4px solid #53917E; 
+    color: #53917E;
+    padding: 5px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+}
+.readmore:hover{
+    cursor: pointer;
+    background-color: #53917E;
+    color: white;
+}
+
+.shape-desc{
+    text-align: center;
+   padding-left: 7%;
+   padding-right: 7%;
+   padding-top: 3%;
+    font-size: 20px;
+}
+
+
+.flex-aside{
+    
+    background-color: white;
+    padding-top:3rem; 
+    flex:1 1 5rem;
+    padding-left: 1%;
+    padding-right: 15%;
+    text-align: justify;
+    color: black;
+}
+
+#ads{
+    color:rgb(90, 88, 88);
+}
+
+.flex-footer{
+    background-color: #53917E;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+
+@media all and (max-width:750px){
+    .flex-main{
+        flex-direction: column;
+    }
+    .flex-header{
+        flex-direction: column;
+    }
+}
+
