@@ -1,5 +1,7 @@
 *{
-    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -7,75 +9,171 @@ html {
   }
 
 body{
-    font-size: 24px;
-    color: white;
+    font-family: 'Arimo', sans-serif;
+    
+    color: black;
     height: 100vh;
     display: flex;
     flex-direction: column;
+   
 }
 
-.flex-header{
-    background-color: #53917E;
-    padding-top: 0.3%;
-    padding-bottom: 0.3%;
-    padding-left: 15%;
-    padding-right: 15%;
-    
+nav{
+    background: #53917E;
+    padding: 5px 20px;
 }
 
-header ul{
+ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    color: rgb(59, 59, 59);
+    font-size: 20px;
+}
+
+.menu li{
+    color: white;
+    font-size: 18px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.title a{
+    font-size: 28px;
+    font-family: 'Oleo Script', cursive;
+}
+
+.title a:hover{
+    cursor:default;
+    color: white;
+}
+
+.button{
+    border-bottom: 1px rgb(100, 175, 152) solid;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+}
+
+.button:hover{
+    font-size: 18px;
+    color:white;
+}
+
+/*Mobile Menu*/
+
+.button{
+    border: none;
+    background-color: #53917E;
+}
+
+.menu{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-
-
-header ul li{
-    
-    padding: 0.5rem;
-    font-size: 20px;
-    font-family: 'Arimo', sans-serif;
+.toggle{ 
+    order:1;
 }
 
-header ul .list{
-    cursor: pointer;
-    flex-shrink: 0;
-    transition-duration: 0.4s;
+.item.button{
+    order: 2;
 }
 
-header ul .list:hover{
-    font-size: 25px;
-    color: rgb(53, 53, 53);
-}
-
-.title{
-    font-family: 'Oleo Script', cursive;
-    font-size: 40px;
-    flex-shrink: 0;
-}
-
-.signup:hover{
-    cursor: pointer;
-    background-color: #FF6666;
-    color: white;
-}
-
-.signup{
-    background-color: #53917E;
-    border: 4px solid #FF6666; 
-    color: white;
-    padding: 10px 28px;
+.item{
+    width: 100%;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 8px;
-    transition-duration: 0.4s;
+    order:3;
+    display: none;
+}
 
+.item.active{
+    display: block;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+   background: rgb(212, 212, 212);
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 19px;
+}
+
+.bars::before,.bars::after{
+    background: rgb(212, 212, 212);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 19px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+
+
+/*Desktop menu*/
+
+@media all and (min-width: 768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .title{
+        order:0;
+    }
+    .item{
+        order:1;
+    }
+    .button{
+        order: 2;
+        border-bottom: none;
+        color: white;
+    }
+
+    .menu li{
+        padding: 15px 10px;
+    }
+
+    .menu li.button{
+        padding-right: 0;
+    }
+
+    .button{
+        padding: 7px 15px;
+        background: #FF6666;
+        border: 1px solid rgb(218, 86, 86);
+        border-radius: 50em;
+    }
+
+   .button:hover{
+        transition: all .25s;
+        background-color: #53917E;
+    }
 }
 
 /* The Modal (background) */
@@ -124,16 +222,18 @@ header ul .list:hover{
 
 
   
-  .close:hover,
+   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+  } 
+
+
 
 .flex-main{
     display: flex;
-    flex: 1;
+    flex-direction: column;
 }
 
 .flex-article{
@@ -145,7 +245,11 @@ header ul .list:hover{
     padding-right: 1%;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 .headline{
     color:rgb(90, 88, 88);
@@ -155,17 +259,6 @@ header ul .list:hover{
      padding-top: 12px; 
 }
 
-a {
-    color: white;
-    text-decoration: none ;
- }
-a:hover
- {
-   color:rgb(53, 53, 53);
-   text-decoration:none;
-   cursor:pointer;
-  }
-
 .podnaslov{
     color:#a88a6a;
     text-align: center;
@@ -174,11 +267,19 @@ a:hover
 
 .recipes,.veges,.shapes1,.shapes2{
     display: flex;
+    flex-direction: column;
     padding-top: 5%;
     padding-bottom: 5%;
-    flex:1;
+    /* flex:1; */
     justify-content: space-between;
 }
+
+ @media all and (min-width: 768px){
+    .recipes,.veges,.shapes1,.shapes2{
+        display: flex;
+        flex-direction: row;
+    }
+} 
 
 .recipe-headline{
     text-align: center;
@@ -193,7 +294,13 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 350px;
+    display: flex;
+    flex-direction: column;
   
+}
+
+.card{
+    flex-direction: column;
 }
 
 .metod{
@@ -264,7 +371,7 @@ img{
 
 
 
-@media all and (max-width:750px){
+/* @media all and (max-width:800px){
     .flex-main{
         flex-direction: column;
     }
@@ -274,7 +381,14 @@ img{
 }
 
 @media screen and (max-width: 800px) {
-    header ul {
+    header ul, {
       flex-direction: column;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+   
+    [class*=".flex-main"] {
+      width: 100%;
+    }
+  } */

@@ -12,57 +12,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Cookie&family=Oleo+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Cookie&family=Oleo+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Kod se nece izvrsiti dok ceo html i css ne budu loadovani/JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+           $(".toggle").on("click",function(){
+               if($(".item").hasClass("active")){
+                $(".item").removeClass("active");
+               }
+               else{
+                $(".item").addClass("active");
+               }
+           })
+        });
+    </script>
 </head>
-    <header class="flex-header">
-        
-    <ul>
-        <li class="title">Pasta 101</li>
-       
-            <li class="list recepti">
-                <a href="#first">RECIPES</a>
-            </li>
-            <li class="list vege"><a href="#second">VEGE RECIPES</a></li>
-            <li class="list shapes"><a href="#third">PASTA SHAPES</a></li>
-        
-       <div class="button">
-           
-        <button type="button" class="signup" id="signup">SIGN IN</button>
-    <!-- The Modal -->
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li class="title"><a href="#">Pasta 101</a></li>
+            <li class="item"><a href="#first">RECIPES</a></li>
+            <li class="item"><a href="#second">VEGE RECIPES</a></li>
+            <li class="item"><a href="#third">PASTA SHAPES</a></li>
+            <li class="item login"><button id="login" class="button">LOG IN</button></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    
+    <!-- The Modal  -->
        <div id="myModal" class="modal">
-           <!-- Modal content -->
+           <!-- Modal content !-->
            <div class="modal-content">
             <span class="close">&times;</span>
-            <form class="form-signin">
-                <div class="formbox">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" placeholder="Username">
-                </div>
-                <div class="formbox">
-                    <label for="password">Password:</label>
-                    <input type="password" id="pw", placeholder="Password">
-                </div>
-                <div class="formbox">
-                    <button id="btn">Sign In</button>
-                </div>
-            </form>
+                <form class="form-signin">
+                    <div class="formbox">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="formbox">
+                        <label for="password">Password:</label>
+                        <input type="password" id="pw", placeholder="Password">
+                    </div>
+                    <div class="formbox">
+                        <button id="login2" class="button">Log In</button>
+                    </div>
+                </form>
           </div>
-        </div>
-    </div>
-       
-       
-
+       </div>
+       </div>
     </ul>
-     
-    </header>
+    </header> 
 
-    <script>
 
-     
-     
-    
-    </script>
-
-    <main class="flex-main">
+<main class="flex-main">
         <article class="flex-article">
             <p id="hello">Hello, </p>
             <p class="headline" id="first">Pasta recipes</p>
@@ -218,381 +221,8 @@
                 </container>    
         </article>
         <aside class="flex-aside">
-            <p id="ads">ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADSADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADSADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
-                    ADS
+             <p id="ads"> 
+                
                     ADS
                     ADS
                     ADS
@@ -836,10 +466,11 @@
                     ADS
                     ADS
                     A
-                   </p>
+                    
         </aside>
     </main>
     <footer class="flex-footer">
             © 2020 PASTA 101 LIMITED
     </footer>
+</body>
 </html>

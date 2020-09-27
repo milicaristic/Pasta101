@@ -1,3 +1,5 @@
+//read more function
+
 function myFunction(btn,dots,more) {
     var dots = document.getElementById(dots);
     var moreText = document.getElementById(more);
@@ -13,13 +15,15 @@ function myFunction(btn,dots,more) {
       moreText.style.display = "inline";
     }
   }
-//aa
+//MODAL
+
   // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("signup");
-var btn2=document.getElementById("btn");
+var btn = document.getElementById("login");
+console.log(btn);
+var btn2=document.getElementById("login2");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -40,6 +44,7 @@ var users=[];
      console.log(users);
      
      localStorage.setItem("Users",JSON.stringify(users));
+
 
 // When the user clicks on the button, open the modal
 var signed=false;
@@ -73,7 +78,7 @@ btn.onclick = function() {
               signIn(name);
               signed=true;
               span.click();
-              document.querySelector('#signup').innerHTML = 'SIGN OUT';
+              document.querySelector('#login').innerHTML = 'LOG OUT';
               break; 
             }
             
@@ -97,7 +102,7 @@ function signIn(name){
 }
 
 function signout(){
-  document.querySelector('#signup').innerHTML = 'SIGN IN';
+  document.querySelector('#login').innerHTML = 'LOG IN';
   hello.style.visibility = "hidden";
   signed=false;
 }
