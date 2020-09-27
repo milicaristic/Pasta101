@@ -105,6 +105,7 @@ function signout(){
   document.querySelector('#login').innerHTML = 'LOG IN';
   hello.style.visibility = "hidden";
   signed=false;
+  hello.innerHTML="Hello, ";
 }
 
 
